@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .syringe {
+      width: 600px;
+      height: 120px;
+      border: 1px solid rgb(170, 170, 170);
+      background-image: linear-gradient(90deg, #fff 45%, #000 45%, #000 55%, rgba(255, 255, 170, 1) 55%);
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+      font-family: "微軟正黑體";
+      font-weight: bold;
+      font-size: 20px;
+      color: rgb(170, 170, 170);
+      line-height: 210px;
+    }
+
+    .syringe::before {
+      content: "";
+      width: 600px;
+      height: 20px;
+      background-image: linear-gradient(90deg,
+          transparent 19%, rgba(0, 0, 0, 0.3) 19%, rgba(0, 0, 0, 0.3) 21%, transparent 21%,
+          transparent 39%, rgba(0, 0, 0, 0.3) 39%, rgba(0, 0, 0, 0.3) 41%, transparent 41%,
+          transparent 59%, rgba(0, 0, 0, 0.3) 59%, rgba(0, 0, 0, 0.3) 61%, transparent 61%,
+          transparent 79%, rgba(0, 0, 0, 0.3) 79%, rgba(0, 0, 0, 0.3) 81%, transparent 81%,
+          transparent 98%, rgba(0, 0, 0, 0.3) 98%, rgba(0, 0, 0, 0.3) 100%, transparent 100%);
+      background-size: 100px;
+      position: absolute;
+    }
+
+    .syringe::after {
+      content: "";
+      width: 600px;
+      height: 120px;
+      background-image: linear-gradient(0deg, transparent 10%, rgba(0, 0, 0, 0.2) 40%, transparent 90%);
+      position: absolute;
+      top: 0px;
+    }
+
+    .needle {
+      width: 720px;
+      height: 80px;
+      border: 1px solid rgb(170, 170, 170);
+      background-image: linear-gradient(0deg, transparent 10%, rgba(0, 0, 0, 0.2) 35%, transparent 90%);
+      border-radius: 8px;
+      position: relative;
+      top: -160%;
+      left: -65px;
+      z-index: -1;
+    }
+
+    .needle::before {
+      content: "";
+      width: 50px;
+      height: 120px;
+      border: 1px solid rgb(170, 170, 170);
+      background-image: linear-gradient(0deg, #fff 10%, rgb(210, 210, 210) 40%, #fff 90%);
+      border-radius: 8px;
+      position: absolute;
+      top: -25%;
+      right: 99%;
+    }
+
+    .needle::after {
+      content: "";
+      width: 100px;
+      border: 1px solid rgb(170, 170, 170);
+      position: absolute;
+      top: 50%;
+      left: 100%;
+      transform: translateY(-50%);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="syringe"> Made in Taiwan
+    <div class="needle"></div>
+  </div>
+</body>
+
+</html>
